@@ -18,12 +18,14 @@ def main():
         data = sys.stdin.read().strip().splitlines()
 
     # Validar que se recibieron dos líneas
-    # Validar que se recibieron dos líneas"Error: La altura debe ser un numero entero""Error: La altura debe ser un numero entero"
     if len(data) < 2:
         print("Error: Se esperan 2 lineas de entrada (altura, caracter)")
         return
-@@ -28,12 +29,14 @@ def main():
-    # Intentar convertir la altura a entero
+
+    m_str = data[0].stri() #primera linea: altura maxima (como texto)
+    s = data[1]            #segunda linea: caracter (o cadena) para la figura
+
+    #intentar convertir la altura a entero
     try:
         # TODO: Convertir m_str a entero y asignarlo a m
         m = int(m_str) 
@@ -33,11 +35,7 @@ def main():
         print("Error: La altura debe ser un numero entero")
 
     # TODO: llamar a la función triangulo_simetrico con los parámetros m y s
-   
     triangulo_simetrico(m, s)
-
-
-
 if _name_ == "_main_":
     main()
-    main()
+    
