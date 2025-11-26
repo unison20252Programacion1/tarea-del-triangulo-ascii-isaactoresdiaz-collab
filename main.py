@@ -35,5 +35,5 @@ def main():
     triangulo_simetrico(m, s)
 
 
-if __name__ == "_main_":
+if _name_ == "_main_":
     main()
