@@ -21,19 +21,20 @@ def main():
         print("Error: Se esperan 2 lineas de entrada (altura, caracter)")
         return
 
-    m_str = data[0].stri() #primera linea: altura maxima (como texto)
-    s = data[1]            #segunda linea: caracter (o cadena) para la figura
+    m_str = data[0].strip()  # primera linea: altura (texto)
+    s = data[1]              # segunda línea: caracter
 
-    #intentar convertir la altura a entero
+    # intentar convertir la altura a entero
     try:
-        # TODO: Convertir m_str a entero y asignarlo a m
-        m = int(m_str) 
+        m = int(m_str)
     except ValueError:
-        # TODO: imprimir "Error: La altura debe ser un numero entero" y salir
         print("Error: La altura debe ser un numero entero")
-        
-    # TODO: llamar a la función triangulo_simetrico con los parámetros m y s
+        return   # <-- IMPORTANTE: salir
+
+    # llamar a la función triangulo_simetrico
     triangulo_simetrico(m, s)
-if __name__=="_main_":
+
+
+if _name_ == "_main_":
     main()
     
